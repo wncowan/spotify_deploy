@@ -1,0 +1,57 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+#wrapper{
+    width: 100%;
+}
+
+body {
+    background-color: #181818
+}
+
+.item {
+    color: white;
+}
+
+.ui.search {
+    margin-left: 84%;
+}
+
+h1 {
+    color: whitesmoke;
+    padding: 20px;
+    border-bottom: 1px solid grey;
+    font-size: 40px;
+}
+
+.ui.secondary.menu {
+    padding: 20px;
+}
+
+.ui.secondary.menu p {
+    padding: 2px;
+    color: whitesmoke;
+    border-bottom: 2px solid rgb(70, 70, 70);
+}
+.ui.secondary.menu img {
+    margin-left: 21%;
+    width: 300px;
+}
+#likedprofiles {
+    display: inline-block
+}
+#likedsongs {
+    display: inline-block
+}
+.ui.card{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.prompt {
+    width: 200px;
+}
+
+.image img {
+    width: 170px;
+}

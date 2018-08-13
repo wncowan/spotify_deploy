@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+    <link rel="Stylesheet" href="{% static 'css/artist.css' %}">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="{% static 'js/artist.js' %}"></script>
+
+    <title>Artist Page</title>
+</head>
+
+<body>
+    <div class="ui secondary  menu">
+        <a href="/spotify" class="active item">
+            <p>Home</p>
+        </a>
+        <a href="/spotify/user" class="item">
+            <p>{{Username.name}}</p>
+        </a>
+        <img src="{% static 'images/Spotify_Logo_RGB_Green.png' %}">
+        <div class="item">
+            <div id="#search" class="ui search">
+                <div class="ui icon input">
+                    <input class="prompt" type="text" placeholder="Search songs...">
+                    <i class="search icon"></i>
+                </div>
+                <div class="results"></div>
+            </div>
+        </div>
+        <div class="right menu">
+            <a href="/spotify/logout" class="ui item">
+                <p>Logout</p>
+            </a>
+        </div>
+    </div>
+    <data value="{{ artist_id }}"></data>
+    <div class="ui center aligned text container">
+        <div id="artistProfile">
+        <img src="" id="artist_pic" class="ui centered large image">
+        <h2 class="ui header" id="track-title"></h2>
+        </div>
+        <div id='topTracks'>
+            <h2>top 10 tracks</h2>
+        </div>
+
+</body>
+
+</html>

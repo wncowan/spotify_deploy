@@ -1,0 +1,65 @@
+* {
+    /* override Semantic UI */
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+body {
+    background-color: #181818;
+}
+.item {
+    color: white;
+}
+
+.ui.search {
+    margin-left: 84%;
+}
+
+h1 {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ui.secondary.menu {
+    padding: 20px;
+}
+
+.ui.secondary.menu p {
+    text-align: center;
+    padding: 2px;
+    color: whitesmoke;
+    border-bottom: 2px solid rgb(70, 70, 70);
+    border-radius: 1px;
+}
+
+.ui.secondary.menu img {
+    margin-left: 21%;
+    width: 300px;
+}
+
+#track-title{
+    color: whitesmoke;
+}
+
+#artist-name{
+    color: whitesmoke; 
+}
+
+#album-title{
+    color: whitesmoke;
+}
+
+#similar-artists{
+    color: whitesmoke;
+}
+
+.ui.center.aligned.text.container h1 {
+    margin-top: 40px;
+}
+
+.ui.five.column.grid {
+    border-top: 1px solid grey;
+    margin-top: 5px;
+}
+.prompt {
+    width: 200px;
+}

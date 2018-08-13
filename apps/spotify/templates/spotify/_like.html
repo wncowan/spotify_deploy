@@ -1,0 +1,8 @@
+{% if not Song in user.otherlikedsongs.all %}
+<a  class="ui inverted green button" href='/spotify/tracks/{{route}}/{{Song.song}}/like'>Add</a>
+{% endif %}
+
+<!-- Added -->
+{% if Song in user.otherlikedsongs.all %}
+<a  class="ui inverted green button" href='/spotify/tracks/{{route}}/{{Song.song}}/unlike'>Remove</a>
+{% endif %}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spotify Registration</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" rel="stylesheet" type="text/css">
+    {% load static %}
+    <link href="{% static 'login_registration/css/login.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="ui one item menu">
+        <div class="item">
+          <a href="/">
+            <img id="logo" src="{% static 'login_registration/images/Spotify_Logo_CMYK_Green.png' %}">
+          </a>
+        </div>
+      </div>
+      <div class="ui middle aligned center aligned grid">
+        <div class="column">
+          
+          <form class="ui large form" method="POST" action="/create">
+            {% csrf_token %}
+            <div class="ui stacked segment">
+              <div class="field">
+                <div class="ui input">
+                  <input type="text" name="email" placeholder="E-mail address">
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui input">
+                  <input type="password" name="password" placeholder="Password">
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui input">
+                  <input type="password" name="confirm_password" placeholder="Confirm Password">
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui input">
+                  <input type="text" name="name" placeholder="What should we call you?">
+                </div>
+              </div>
+              <button class="ui fluid large teal submit button">Register</button>
+            </div>
+            <div class="ui {% if errors %} visible {% endif %} error message">
+              <ul class="list">
+                {% for error in errors %}
+                  <li>{{error}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </form>
+          
+          <div class="ui message">
+            Already have an account? <a href="/">Login</a>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

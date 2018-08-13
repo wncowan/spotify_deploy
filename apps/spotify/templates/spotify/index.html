@@ -1,0 +1,67 @@
+<!--Classical: g.21 -->
+<!--Pop: g.5 -->
+<!--Metal: g.394 -->
+<!--Spoken Word: g.156 -->
+<!--Rap: g.146 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js'></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    <title>Spotify</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="ui secondary menu">
+        <a href="/spotify" class="active item">
+            <p>Home</p>
+        </a>
+        <a href="/spotify/user" class="item">
+          <p>{{user.name}}</p>
+        </a>
+        <img src="{% static 'images/Spotify_Logo_RGB_Green.png' %}">
+        <div class="item">
+            <div id="#search" class="ui search">
+            <div class="ui icon input">
+                <input class="prompt" type="text" placeholder="Search songs...">
+                <i class="search icon"></i>
+            </div>
+            <div class="results"></div>
+            </div>
+        </div>
+        <div class="right menu">
+            <a href="/spotify/logout" class="ui item">
+                <p>Logout</p>
+            </a>
+        </div>
+    </div>
+    </div>
+    <h1>Genres</h1>
+    <div class="genres">
+        <data value='{{Song}}'></data>
+        <h2>Classical</h2>
+        <div class="ui five column grid" id="genre0"></div>
+        <h2>Pop</h2>
+        <div class="ui five column grid" id="genre1"></div>
+        <h2>Metal</h2>
+        <div class="ui five column grid" id="genre2"></div>
+        <h2>Spoken Word</h2>
+        <div class="ui five column grid" id="genre3"></div>
+        <h2>Rap</h2>
+        <div class="ui five column grid" id="genre4"></div>
+    <div>
+
+</body>
+</html>

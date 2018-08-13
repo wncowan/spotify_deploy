@@ -1,0 +1,20 @@
+body {
+    background-color: #181818
+}
+.item {
+    /* override Semantic UI */
+    background-color: #181818 !important
+}
+
+#logo {
+    width: 300px;
+}
+
+.column {
+    max-width: 450px;
+    
+}
+input::placeholder {
+    /* override Semantic UI */
+    color: grey !important
+}
